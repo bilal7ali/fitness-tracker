@@ -9,10 +9,6 @@
 #define SRC_ALGORITHM_H_
 
 
-
-#endif /* SRC_ALGORITHM_H_ */
-
-
 #include "main.h"
 #include "stm32f4xx_hal.h"
 
@@ -32,3 +28,5 @@ typedef struct
 int32_t dcFilter(uint32_t sample);
 
 int32_t meanDiff(int32_t newSample, meanDiffFilter_t *sampleValues);
+
+#endif /* SRC_ALGORITHM_H_ */

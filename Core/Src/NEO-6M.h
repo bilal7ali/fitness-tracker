@@ -8,7 +8,6 @@
 #ifndef SRC_NEO_6M_H_
 #define SRC_NEO_6M_H_
 
-#endif /* SRC_NEO_6M_H_ */
 
 #include "main.h"
 #include <stdint.h>
@@ -20,3 +19,5 @@
 void parse_gps_data(char *nmea);
 
 void getGPSValue();
+
+#endif /* SRC_NEO_6M_H_ */

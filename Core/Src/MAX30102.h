@@ -8,8 +8,6 @@
 #ifndef SRC_MAX30102_H_
 #define SRC_MAX30102_H_
 
-#endif /* SRC_MAX30102_H_ */
-
 
 #include "main.h"
 #include <stdint.h>
@@ -164,3 +162,4 @@ HAL_StatusTypeDef MAX30102_CheckConnection(max30102_t *obj);
 
 void MAX30102_clearFifo(max30102_t *obj);
 
+#endif /* SRC_MAX30102_H_ */

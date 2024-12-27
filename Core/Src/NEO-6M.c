@@ -23,7 +23,6 @@ void parse_gps_data(char *nmea) {
 
         if (strcmp(token, "A") == 0)
         { // Ensure the status is "A" (active)
-            // Get Latitude
         	isGPSValid = true;
             strcpy(latitude, strtok(NULL, ",")); // Latitude value
             token = strtok(NULL, ","); // N/S Indicator
@@ -33,7 +32,6 @@ void parse_gps_data(char *nmea) {
                 latitude[0] = '-'; // Convert to negative for southern hemisphere
             }
 
-            // Get Longitude
             strcpy(longitude, strtok(NULL, ",")); // Longitude value
             token = strtok(NULL, ","); // E/W Indicator
 
@@ -63,6 +61,6 @@ void getGPSValue(UART_HandleTypeDef *uart)
 	}
 	else
 	{
-		printf("NO SATELLITE SIGNAL");
+		printf("NO GPS SIGNAL");
 	}
 }
