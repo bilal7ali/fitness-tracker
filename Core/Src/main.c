@@ -58,8 +58,7 @@ UART_HandleTypeDef huart2;
 /* USER CODE BEGIN PV */
 int __io_putchar(int ch)
 {
-  uint8_t temp = ch;
-  HAL_UART_Transmit(&huart2, &temp, 1, HAL_MAX_DELAY);
+  HAL_UART_Transmit(&huart2, (uint8_t*)&ch, 1, HAL_MAX_DELAY);
   return ch;
 }
 
@@ -135,11 +134,11 @@ int main(void)
   /* USER CODE BEGIN WHILE */
   while (1)
   {
-//	  getGPSValue(&huart4);
-	  if (MAX30102_hasInterrupt(&max30102))
-	  {
-		  MAX30102_interruptHandler(&max30102);
-	  }
+	  getGPSValue(&huart4);
+//	  if (MAX30102_hasInterrupt(&max30102))
+//	  {
+//		  MAX30102_interruptHandler(&max30102);
+//	  }
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */

@@ -194,7 +194,8 @@ HAL_StatusTypeDef MAX30102_CheckConnection(max30102_t *obj)
     // Read the Part ID register (0xFF)
     status = HAL_I2C_Mem_Read(obj->_ui2c, 0xAE, 0xFF, I2C_MEMADD_SIZE_8BIT, &partId, 1, MAX30102_I2C_TIMEOUT_MS);
 
-    if (status == HAL_OK && partId == 0x15) {
+    if (status == HAL_OK && partId == 0x15)
+    {
         // Successful communication and correct Part ID
         printf("MAX30102 is connected and functioning correctly.\r\n");
         return HAL_OK;
