@@ -51,6 +51,7 @@ void parse_gps_data(char *nmea)
     }
 }
 
+// Get values from module and send NMEA sentences to be parsed
 void getGPSValue(UART_HandleTypeDef *uart)
 {
     memset(gps_data, 0, sizeof(gps_data));
@@ -83,7 +84,7 @@ void getGPSValue(UART_HandleTypeDef *uart)
     if (isGPSValid)
     {
         printf("Latitude: %s, Longitude: %s\r\n", latitude, longitude);
-        printf("GPS VALID? %d\r\n", isGPSValid);
+//        printf("GPS VALID? %d\r\n", isGPSValid);
     }
     else
     {

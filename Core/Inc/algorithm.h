@@ -16,6 +16,9 @@
 #define MINIMUM_ADC_VALUE 180000
 #define MEAN_FILTER_SIZE 5
 
+#define PEAK_THRESHOLD 100
+#define MIN_PEAK_DISTANCE_MS 500
+
 typedef struct
 {
   int32_t values[MEAN_FILTER_SIZE];
@@ -24,6 +27,11 @@ typedef struct
   uint8_t count;
 } meanDiffFilter_t;
 
+typedef struct
+{
+	uint32_t lastPeakTime;
+	uint8_t peakDetected;
+} bpmState_t;
 
 int32_t dcFilter(uint32_t sample);
 

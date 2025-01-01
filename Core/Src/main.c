@@ -134,11 +134,11 @@ int main(void)
   /* USER CODE BEGIN WHILE */
   while (1)
   {
+	  if (MAX30102_hasInterrupt(&max30102))
+	  {
+		  MAX30102_interruptHandler(&max30102);
+	  }
 	  getGPSValue(&huart4);
-//	  if (MAX30102_hasInterrupt(&max30102))
-//	  {
-//		  MAX30102_interruptHandler(&max30102);
-//	  }
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
