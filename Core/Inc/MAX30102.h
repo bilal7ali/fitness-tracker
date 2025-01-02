@@ -154,8 +154,6 @@ void MAX30102_readFifo(max30102_t *obj);
 
 void MAX30102_readTemp(max30102_t *obj, int8_t *temp_int, uint8_t *temp_frac);
 
-//void MAX30102_Read(MAX30102_t *obj, uint32_t *pun_red_led, uint32_t *pun_ir_led);
-
 void MAX30102_ReadMultipleSamples(max30102_t *obj, int num_samples);
 
 HAL_StatusTypeDef MAX30102_CheckConnection(max30102_t *obj);

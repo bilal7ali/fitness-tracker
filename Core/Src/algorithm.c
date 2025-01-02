@@ -32,8 +32,8 @@ void max30102_plot(uint32_t ir_sample, uint32_t red_sample)
 		{
 			bpm = 60000 / timeDelta;
 			printf("BPM: %u\r\n", bpm);
-			printf("Red: %ld\r\n", meanDiffRed);
-			printf("TIME DELTA: %u\r\n", timeDelta);
+//			printf("Red: %ld\r\n", meanDiffRed);
+//			printf("TIME DELTA: %u\r\n", timeDelta);
 			bpmState.lastPeakTime = currentTime;
 		}
 
